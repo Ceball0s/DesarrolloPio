@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venta Libros</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+
+    <div class="book">
+        <h1>Libros en Venta</h1>
+        <h2>Luna de Plutón</h2>
+        <img src="libro.jpg" alt="Portada de Luna de Plutón" width="200">
+        <p>Una fascinante historia de aventura y descubrimiento en el mundo de la ciencia ficción. Sigue las peripecias de sus personajes mientras navegan por los misterios de Plutón y su luna en una narrativa cautivadora.</p>
+        
+        <h3>Comentarios</h3>
+        <div id="comments">
+            <!-- Los comentarios se agregarán aquí mediante JavaScript -->
+        </div>
+
+        <h3>Deja tu comentario</h3>
+        <form id="reviewForm">
+            <input type="text" id="name" placeholder="Tu nombre" required>
+            <textarea id="review" placeholder="Tu reseña" required></textarea>
+            <input type="number" id="rating" placeholder="Tu nota (1-5)" min="1" max="5" required>
+            <button type="submit">Enviar Reseña</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
