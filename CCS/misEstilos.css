@@ -1,0 +1,293 @@
+/* Importar la fuente retro de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+/* Estilo base para el cuerpo */
+body {
+    background-color: #0d0d0d; /* Fondo oscuro */
+    color: #00ffff; /* Texto neón */
+    font-family: 'Press Start 2P', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Títulos principales con efectos retro */
+h1, h2, h3 {
+    font-family: 'Press Start 2P', sans-serif;
+    color: #66fcf1; /* Color neón cian */
+    text-align: center;
+    font-size: 3em; /* Tamaño grande */
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    text-shadow: 0 0 5px #66fcf1, 0 0 10px #45a29e, 0 0 20px #66fcf1; /* Efecto glow */
+}
+
+/* Fondo con efecto degradado para el contenedor principal */
+main {
+    height: 100vh; /* Ocupa toda la altura de la ventana */
+    padding: 20px;
+    background: linear-gradient(135deg, #1f2833 0%, #0b0c10 100%); /* Fondo degradado oscuro */
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.3); /* Sombra sutil */
+}
+
+/* Botones con efectos retro y neón */
+button {
+    background-color: #45a29e; /* Fondo verde neón */
+    color: #0b0c10; /* Color del texto */
+    font-family: 'Press Start 2P', sans-serif; /* Fuente retro */
+    border: none;
+    padding: 10px 20px;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    border-radius: 5px;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px #66fcf1, 0 0 20px #45a29e; /* Efecto glow */
+    position: relative;
+    z-index: 1;
+}
+
+button:hover {
+    background-color: #66fcf1; /* Efecto hover con color cian */
+    color: #0b0c10;
+    box-shadow: 0 0 20px #66fcf1; /* Efecto glow más fuerte al pasar el ratón */
+}
+
+/* Tarjetas de productos con estilo cyberpunk */
+.card {
+    background-color: #0b0c10; /* Fondo oscuro */
+    color: #c5c6c7; /* Texto claro */
+    border: 2px solid transparent; /* Borde inicial */
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(102, 252, 241, 0.3), inset 0 0 10px rgba(102, 252, 241, 0.1); /* Resplandor interior y exterior */
+    transition: transform 0.3s ease, box-shadow 0.5s ease, border 0.5s ease;
+    overflow: hidden; /* Para evitar desbordes */
+    position: relative;
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, #66fcf1, #1f2833, #45a29e, #66fcf1);
+    background-size: 400% 400%;
+    z-index: 0;
+    opacity: 0.1;
+    filter: blur(20px);
+    animation: neon-glow 6s infinite;
+}
+
+@keyframes neon-glow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(102, 252, 241, 0.8), inset 0 0 15px rgba(102, 252, 241, 0.3); /* Resplandor más intenso */
+    border: 2px solid #66fcf1; /* Borde brillante */
+}
+
+.card-img-top {
+    border-radius: 10px 10px 0 0;
+    transition: opacity 0.3s, transform 0.3s ease;
+    z-index: 1; /* Encima del fondo */
+    position: relative;
+}
+
+.card-img-top:hover {
+    opacity: 0.9;
+    transform: scale(1.1); /* Zoom al pasar el ratón */
+}
+
+.card-title {
+    font-size: 1.5em;
+    color: #66fcf1; /* Título en neón */
+    font-family: 'Orbitron', sans-serif; /* Fuente futurista */
+    text-transform: uppercase;
+    z-index: 1;
+    position: relative;
+}
+
+.card-text {
+    font-size: 1em;
+    color: #c5c6c7; /* Texto claro */
+    font-family: 'Roboto', sans-serif; /* Complemento con una fuente limpia */
+    z-index: 1;
+    position: relative;
+}
+
+
+/* Contenedor de productos con disposición en filas */
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Efecto glow en botones, títulos y texto */
+button, h1, .card-title {
+    text-shadow: 0 0 10px #45a29e, 0 0 20px #66fcf1;
+}
+
+.cyberpunk-title {
+    font-size: 2.5rem;
+    color: #ff00ff;
+    text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff;
+}
+
+a:hover {
+    color: #00ffff; /* Cambio de color al pasar el cursor */
+    text-shadow: 0 0 8px #00ffff;
+}
+
+.bg-primary {
+    background: linear-gradient(90deg, #ff00ff, #00ffff);
+    color: #0d0d0d;
+}
+
+header, footer {
+    background: radial-gradient(circle, #1a1a1a 0%, #0d0d0d 100%);
+}
+
+.cyberpunk-flicker {
+    animation: flicker 1.5s infinite alternate;
+}
+
+@keyframes flicker {
+    0% { opacity: 1; }
+    50% { opacity: 0.8; }
+    100% { opacity: 1; }
+}
+
+
+.navbar {
+    background: linear-gradient(90deg, #1a1a1a, #333333);
+}
+
+.navbar-brand, .nav-link {
+    color: #00ffff;
+    text-shadow: 0 0 8px #00ffff;
+}
+
+.navbar-brand:hover, .nav-link:hover {
+    color: #ff00ff;
+    text-shadow: 0 0 12px #ff00ff;
+}
+
+svg {
+    fill: #00ffff;
+    filter: drop-shadow(0 0 6px #00ffff);
+}
+svg:hover {
+    fill: #ff00ff;
+    filter: drop-shadow(0 0 12px #ff00ff);
+}
+
+/* Estilo base para los modales */
+.modal-content {
+    background-color: #0b0c10; /* Fondo oscuro */
+    color: #c5c6c7; /* Texto claro */
+    border: 2px solid transparent; /* Sin bordes al inicio */
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(102, 252, 241, 0.5), inset 0 0 10px rgba(102, 252, 241, 0.2); /* Resplandor neón */
+    transition: transform 0.3s ease, box-shadow 0.5s ease, border 0.5s ease;
+    overflow: hidden; /* Prevenir desbordes */
+    position: relative;
+}
+
+/* Animación de resplandor en bordes */
+.modal-content::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, #66fcf1, #1f2833, #45a29e, #66fcf1);
+    background-size: 400% 400%;
+    z-index: 0;
+    opacity: 0.1;
+    filter: blur(25px);
+    animation: neon-glow-modal 6s infinite;
+}
+
+@keyframes neon-glow-modal {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Header del modal */
+.modal-header {
+    border-bottom: 1px solid #45a29e; /* Línea decorativa */
+    font-family: 'Orbitron', sans-serif; /* Fuente futurista */
+    color: #66fcf1; /* Título en neón */
+}
+
+/* Botón de cierre */
+.modal-header .btn-close {
+    background-color: #66fcf1; /* Fondo del botón de cerrar */
+    border: none;
+    filter: brightness(1.5);
+    transition: filter 0.3s;
+}
+
+.modal-header .btn-close:hover {
+    filter: brightness(2.5);
+}
+
+/* Inputs en formularios */
+.modal-body .form-control {
+    background-color: #1f2833; /* Fondo oscuro */
+    color: #c5c6c7; /* Texto claro */
+    border: 1px solid #45a29e; /* Borde brillante */
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(102, 252, 241, 0.3); /* Sombra interna */
+    transition: box-shadow 0.3s, border-color 0.3s;
+}
+
+.modal-body .form-control:focus {
+    box-shadow: 0 0 10px rgba(102, 252, 241, 0.8); /* Resplandor al enfocar */
+    border-color: #66fcf1;
+}
+
+/* Botones */
+.modal-footer .btn {
+    background-color: #45a29e;
+    color: #c5c6c7;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(102, 252, 241, 0.5);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.modal-footer .btn:hover {
+    background-color: #66fcf1;
+    transform: scale(1.1);
+}
+
+/* Animación para botones */
+button[type="submit"] {
+    background-color: #66fcf1;
+    border: 2px solid transparent;
+    font-family: 'Orbitron', sans-serif;
+    color: #0b0c10;
+    transition: background 0.3s, transform 0.3s;
+}
+
+button[type="submit"]:hover {
+    transform: scale(1.1);
+    background-color: #45a29e;
+    color: #ffffff;
+}
+
+#prodCarrusel {
+    display: none; /* Ocultamos el detalle por defecto */
+}
