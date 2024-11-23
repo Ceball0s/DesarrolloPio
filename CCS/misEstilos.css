@@ -28,6 +28,7 @@ main {
     background: linear-gradient(135deg, #1f2833 0%, #0b0c10 100%); /* Fondo degradado oscuro */
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0, 255, 255, 0.3); /* Sombra sutil */
+    min-height: calc(100vh - header_height - footer_height); /* Ajusta estos valores */
 }
 
 /* Botones con efectos retro y neón */
